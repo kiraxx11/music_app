@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Container, ThemeProvider, Button ,CssBaseline} from '@mui/material';
+
+import SearchBar from './components/SearchBar';
+import Player from './components/Player';
+import theme from './styles/themeConfig';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+       <CssBaseline />
+      <SearchBar>
+
+      </SearchBar>
+      <Container fixed maxWidth={'md'}>
+        <h1>
+          hola
+        </h1>
+
+        <p> lorem</p>
+
+        <Button variant="contained" color='primary'>
+          asd
+        </Button>
+        <Button variant="contained" color="secondary">
+          asd
+        </Button>
+      </Container>
+      <Player/>
+    </ThemeProvider>
   );
 }
 
